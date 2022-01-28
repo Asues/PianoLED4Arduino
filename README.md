@@ -1,3 +1,4 @@
+
 ![](pic/logo.png)
 **Piano LED for Arduino (PLA)** is a *free, lightweight, without Ad*. application that allows you to controll LED-Strips during you playing digital piano (you still need an Arduino board, like UNO). It is able to receive MIDI message from your digital piano and transmit the MIDI data to Arduino, so that Arduino is able to control LEDs with the MIDI-Streaming. You can also play piano with this app and Logic Pro together.
 
@@ -5,10 +6,24 @@
 
 For new informations please visit at: [this link](https://www.mahong.me/archives/831)
 
+- [Download Links](#download-links)
+- [Working Principle (Data Flow)](#working-principle--data-flow-)
+- [Requirement](#requirement)
+- [Preparation](#preparation)
+- [Quick Start](#quick-start)
+- [About transmission message](#about-transmission-message)
+  * [Note Status](#note-status)
+  * [Example](#example)
+- [Contributions](#contributions)
+  * [Sketch App Sources](#sketch-app-sources)
+  * [Font](#font)
+  * [Library](#library)
+
 # Download Links
 Version 1.0: [Google Drive](https://drive.google.com/file/d/1BcECvxdBHfR2Y0WgC1VY_5yRrhZZ0OAX/view?usp=sharing), [MEGA](https://mega.nz/file/LHBDnIKa#Pr-MxP1Z7d9Q6Bov0dXnC5QXqigoT0Y1XQUhZjIgNy4).
 
 > Do NOT stare at the LED for a long time, it will permanently damage your eyes!
+
 
 # Working Principle (Data Flow)
 ![](pic/WorkingPrinciple.png)
@@ -61,3 +76,18 @@ If key note A0 (the first key of your piano) is release, PLA will send 21(0x15) 
 
 If key note C8 (the last key of your piano) is release, PLA will send 108(0x6C) to Arduino, when this key is pressed, PLA will send 236(108+128) to Arduino.
 
+# Contributions
+
+## Sketch App Sources
+1. Synthesizer Icon by [John Khester](https://www.sketchappsources.com/free-source/1694-synthesizer-piano-icon-sketch-freebie-resource.html)
+2. Skeuomorphic Button Styles by [Minh Pham](https://dribbble.com/shots/14281882--Making-4-skeuomorphic-button-styles-in-1-minute)
+3. Modern Power Button by [Ronald Ravelo](https://www.sketchappsources.com/free-source/1023-modern-power-button-sketch-freebie-resource.html)
+4. Arduino UNO by [Ramon Gilabert Llop](https://www.sketchappsources.com/free-source/2077-arduino-uno-board-vector-sketch-freebie-resource.html)
+
+## Font
+Radio Stars by Typodermic from [https://www.fonts.com/](https://www.fonts.com/)
+
+## Library
+[Gong](https://github.com/dclelland/Gong) 
+
+[RSSerialPort](https://github.com/armadsen/ORSSerialPort)
